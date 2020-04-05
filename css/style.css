@@ -1,25 +1,38 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.ttf');
+}
+
+[class^="ico-"], [class*="ico"] {
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+}
+
 body {
     margin: 0;
 }
 
 .header {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
-.header h1 {
-    margin: 0;
+.header img {
+    margin-bottom: 10px;
 }
 
 main {
     height: 500px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .main-languajes {
     width: 554px;
     height: 325px;
-    border: 1px solid red;
     margin: 0 auto;
     position: relative;
 }
@@ -32,8 +45,15 @@ main {
 }
 
 .main-languajes [class^="lang"] a {
-    color: #337EDB;
+    color: #3366cc;
     text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.main-languajes [class^="lang"] span {
+    font-size: 12.5px;
+    color: #54595d;
 }
 
 .main-languajes .lang3,.lang4 {
@@ -97,5 +117,232 @@ main {
     margin: 0px auto;
     position: absolute;
     top: 60px;
-    right: 170px;
+    right: 175px;
+}
+
+.main-search {
+    margin-top: 7px;
+}
+
+.search-input-container {
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-input-container button {
+    height: 44px;
+    width: 56px;
+    background-color: #3366cc;
+    border: 1px solid #a2a9b1;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.search-input-container button:hover {
+    background-color: #447FF5;
+}
+
+.search-input-container 
+button 
+.ico-search:before{
+    content: '\e986';
+    color: white;
+    font-size: 20px;
+}
+
+.input-container {
+    display: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #a2a9b1;
+    border-radius: 2px;
+}
+
+.input-container input {
+    width: 335px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.input-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 45px;
+    height: 24px;
+    color: #a2a9b1;
+}
+
+.input-list:hover {
+    background-color: #F8F9FA;
+}
+
+.input-list select {
+    width: 45px;
+    height: 24px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    color: transparent;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.input-list .arrow-ico:before {
+    content: '\e900';
+    font-size: 22px;
+}
+
+.search-lang-list {
+    width: 245px;
+    height: 33px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-lang-list button {
+    width: 245px;
+    height: 33px;
+    padding-top: 3px;
+    padding-left: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    border-radius: 2px;
+    color: #3366cc;
+}
+
+.search-lang-list 
+button 
+.ico-lang:before {
+    content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDov%0D%0AL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAw%0D%0AIDIzIDE2Ij4KCTx0aXRsZT4KCQlUcmFuc2xhdGUgaWNvbgoJPC90aXRsZT4KCTxwYXRoIGZpbGw9%0D%0AIiMzNmQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTE5IDEyLjRsMS4zIDMuNmgxLjhMMTcuOSAz%0D%0AaC0yLjVMMTEgMTZoMS44bDEuMi0zLjZoNXptLTIuNS03LjlsMi4xIDYuMmgtNC4ybDIuMS02LjJ6%0D%0ATTcuMSAySDhMNyAwSDVsLjUgMWMuMy42LjkgMSAxLjYgMXptMy44IDIuNWgybC41LTEuNUgxdjEu%0D%0ANWgxLjljLjYgMS44IDEuNSAzLjMgMi44IDQuNy0xLjQgMS4xLTMuMSAxLjctNC44IDIuM2wuNSAx%0D%0ALjVjMi0uNiAzLjgtMS40IDUuNS0yLjcuOS43IDIuMSAxLjQgMy41IDEuOGwuNS0xLjVjLTEuMS0u%0D%0AMy0yLS44LTIuOC0xLjQgMS45LTEuOSAyLjUtMy44IDIuNi00bC4yLS43em0tNCAzLjdjLTEtMS0x%0D%0ALjktMi4zLTIuMy0zLjdoNC43Yy0uNSAxLjQtMS40IDIuNi0yLjQgMy43LTEuNi0xLjcgMCAwIDAg%0D%0AMHoiLz4KPC9zdmc+Cg==');
+    position: absolute;
+    left: 13px;
+    top: 8px;
+}
+
+.search-lang-list
+button
+.arrow-ico:before {
+    content: '\e900';
+    font-size: 22px;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+}
+
+.footer {
+    border-top: 1px solid #a2a9b1;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-rows: 120px 1fr;
+    font-size: 13px;
+    color: #54595d;
+}
+
+.footer-info .footer-info-details {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    line-height: 21px;
+}
+
+.footer-info .footer-info-details img {
+    position: absolute;
+}
+
+.footer-info .footer-info-details p {
+    margin-top: 0;
+    padding-left: 51px;
+}
+
+.footer-info .footer-info-download {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 51px;
+    background-color: #F8F9FA;
+}
+
+.footer-info-download .download-img {
+    position: absolute;
+    left: 0;
+}
+
+.footer-info-download strong {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.footer .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-links .link {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 51px;
+    height: 90px;
+}
+
+.footer-links .link h5, p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.footer-links .link img {
+    position: absolute;
+    left: 0;
+}
+
+.footer-links .link p {
+    color: #54595d;
+    font-size: 12px;
+}
+
+.footer-links .link h5 {
+    color: #3366cc;
+    font-weight: 400;
+}
+
+.footer-links .link a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+}
+
+.license {
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: #54595d;
+}
+
+.license a {
+    text-decoration: none;
+    color: #3366cc;
+}
+
+.license .legal::before {
+    content: '•';
+    padding: 0 7px;
+    font-size: 12px;
 }
