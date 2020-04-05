@@ -10,7 +10,7 @@ Puedes clonar el repositorio
 ## Como se usa
 Abrir archivo index.html en el navegador
 
-Se mostrará el clon de google
+Se mostrará el clon de Wikipedia
 ![Preview](https://github.com/Esteban-Ladino/Wikipedia-clone/blob/master/images/preview.png)
 
 ## Como contribuir
